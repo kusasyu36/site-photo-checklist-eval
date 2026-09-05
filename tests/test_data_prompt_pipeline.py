@@ -40,6 +40,10 @@ def test_prompt_contains_all_items_and_hints_only_when_hinted():
         assert it.hint in hinted and it.hint not in bare
     assert "/x/p01.jpg" in bare
     assert "unclear" in bare
+    framed = build_prompt("/x/p01.jpg", "framed")
+    assert "判定の規則" in framed and "判定の規則" not in bare and "判定の規則" not in hinted
+    for it in ITEMS:
+        assert it.hint not in framed
 
 
 def test_mock_pipeline_end_to_end(tmp_path):

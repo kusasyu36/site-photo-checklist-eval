@@ -1,0 +1,723 @@
+{
+ "bare": {
+  "n_records": 20,
+  "n_scored": 204,
+  "precision": 0.9342105263157895,
+  "recall": 0.9466666666666667,
+  "f1": 0.9403973509933775,
+  "accuracy": 0.9558823529411765,
+  "exact_match_rate": 0.65,
+  "abstain": 23,
+  "format_invalid": 0,
+  "llm_error": 0,
+  "per_item": {
+   "scaffolding": {
+    "n": 19,
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "tn": 10,
+    "abstain": 0,
+    "skipped": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "heavy_machinery": {
+    "n": 17,
+    "tp": 10,
+    "fp": 0,
+    "fn": 1,
+    "tn": 6,
+    "abstain": 0,
+    "skipped": 3,
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1": 0.9523809523809523
+   },
+   "workers": {
+    "n": 20,
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "tn": 13,
+    "abstain": 3,
+    "skipped": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "worker_no_helmet": {
+    "n": 19,
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 18,
+    "abstain": 4,
+    "skipped": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "perimeter_barrier": {
+    "n": 18,
+    "tp": 8,
+    "fp": 1,
+    "fn": 1,
+    "tn": 8,
+    "abstain": 3,
+    "skipped": 2,
+    "precision": 0.8888888888888888,
+    "recall": 0.8888888888888888,
+    "f1": 0.8888888888888888
+   },
+   "excavation": {
+    "n": 16,
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "tn": 13,
+    "abstain": 1,
+    "skipped": 4,
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1": 0.8
+   },
+   "stacked_materials": {
+    "n": 15,
+    "tp": 6,
+    "fp": 1,
+    "fn": 0,
+    "tn": 8,
+    "abstain": 4,
+    "skipped": 5,
+    "precision": 0.8571428571428571,
+    "recall": 1.0,
+    "f1": 0.923076923076923
+   },
+   "adjacent_structures": {
+    "n": 16,
+    "tp": 8,
+    "fp": 3,
+    "fn": 0,
+    "tn": 5,
+    "abstain": 1,
+    "skipped": 4,
+    "precision": 0.7272727272727273,
+    "recall": 1.0,
+    "f1": 0.8421052631578948
+   },
+   "public_road_or_traffic": {
+    "n": 14,
+    "tp": 6,
+    "fp": 0,
+    "fn": 0,
+    "tn": 8,
+    "abstain": 2,
+    "skipped": 6,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "signage": {
+    "n": 15,
+    "tp": 8,
+    "fp": 0,
+    "fn": 1,
+    "tn": 6,
+    "abstain": 1,
+    "skipped": 5,
+    "precision": 1.0,
+    "recall": 0.8888888888888888,
+    "f1": 0.9411764705882353
+   },
+   "water_or_mud": {
+    "n": 18,
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "tn": 15,
+    "abstain": 1,
+    "skipped": 2,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "overhead_lines": {
+    "n": 17,
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "tn": 14,
+    "abstain": 3,
+    "skipped": 3,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   }
+  },
+  "failures": {
+   "by_type": {
+    "abstain_on_clear": 23,
+    "miss": 1,
+    "false_alarm": 5
+   },
+   "by_item": {
+    "format_invalid": {},
+    "llm_error": {},
+    "false_alarm": {
+     "adjacent_structures": 3,
+     "perimeter_barrier": 1,
+     "stacked_materials": 1
+    },
+    "miss": {
+     "heavy_machinery": 1
+    },
+    "abstain_on_clear": {
+     "stacked_materials": 4,
+     "perimeter_barrier": 3,
+     "public_road_or_traffic": 2,
+     "workers": 3,
+     "worker_no_helmet": 4,
+     "signage": 1,
+     "water_or_mud": 1,
+     "overhead_lines": 3,
+     "excavation": 1,
+     "adjacent_structures": 1
+    }
+   },
+   "examples": [
+    {
+     "photo_id": "p02",
+     "type": "miss",
+     "item": "heavy_machinery",
+     "evidence": "クレーンや掘削機などの建設機械は写っていない"
+    },
+    {
+     "photo_id": "p02",
+     "type": "false_alarm",
+     "item": "adjacent_structures",
+     "evidence": "手前の建物の奥にもう一棟の建物が近接して写っている"
+    },
+    {
+     "photo_id": "p04",
+     "type": "false_alarm",
+     "item": "perimeter_barrier",
+     "evidence": "手前左に赤いバリケード状のフェンス資材が置かれている"
+    },
+    {
+     "photo_id": "p06",
+     "type": "false_alarm",
+     "item": "stacked_materials",
+     "evidence": "手前に緑色の資材コンテナ（廃材・資材用ダンプボックス）が複数置かれている"
+    },
+    {
+     "photo_id": "p11",
+     "type": "false_alarm",
+     "item": "adjacent_structures",
+     "evidence": "太い鉄筋コンクリート柱や壁状の構造物が近接して写っている"
+    },
+    {
+     "photo_id": "p19",
+     "type": "false_alarm",
+     "item": "adjacent_structures",
+     "evidence": "現場の奥に仮設ハウスや小さな建物、木々の間に他の建物らしきものが見える"
+    }
+   ]
+  }
+ },
+ "hinted": {
+  "n_records": 20,
+  "n_scored": 204,
+  "precision": 0.9210526315789473,
+  "recall": 0.9333333333333333,
+  "f1": 0.9271523178807947,
+  "accuracy": 0.946078431372549,
+  "exact_match_rate": 0.6,
+  "abstain": 25,
+  "format_invalid": 0,
+  "llm_error": 0,
+  "per_item": {
+   "scaffolding": {
+    "n": 19,
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "tn": 10,
+    "abstain": 0,
+    "skipped": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "heavy_machinery": {
+    "n": 17,
+    "tp": 10,
+    "fp": 0,
+    "fn": 1,
+    "tn": 6,
+    "abstain": 1,
+    "skipped": 3,
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1": 0.9523809523809523
+   },
+   "workers": {
+    "n": 20,
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "tn": 13,
+    "abstain": 4,
+    "skipped": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "worker_no_helmet": {
+    "n": 19,
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 17,
+    "abstain": 4,
+    "skipped": 1,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666
+   },
+   "perimeter_barrier": {
+    "n": 18,
+    "tp": 8,
+    "fp": 1,
+    "fn": 1,
+    "tn": 8,
+    "abstain": 5,
+    "skipped": 2,
+    "precision": 0.8888888888888888,
+    "recall": 0.8888888888888888,
+    "f1": 0.8888888888888888
+   },
+   "excavation": {
+    "n": 16,
+    "tp": 1,
+    "fp": 0,
+    "fn": 2,
+    "tn": 13,
+    "abstain": 1,
+    "skipped": 4,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1": 0.5
+   },
+   "stacked_materials": {
+    "n": 15,
+    "tp": 6,
+    "fp": 2,
+    "fn": 0,
+    "tn": 7,
+    "abstain": 2,
+    "skipped": 5,
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571428571428571
+   },
+   "adjacent_structures": {
+    "n": 16,
+    "tp": 8,
+    "fp": 2,
+    "fn": 0,
+    "tn": 6,
+    "abstain": 2,
+    "skipped": 4,
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1": 0.888888888888889
+   },
+   "public_road_or_traffic": {
+    "n": 14,
+    "tp": 6,
+    "fp": 0,
+    "fn": 0,
+    "tn": 8,
+    "abstain": 2,
+    "skipped": 6,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "signage": {
+    "n": 15,
+    "tp": 8,
+    "fp": 0,
+    "fn": 1,
+    "tn": 6,
+    "abstain": 1,
+    "skipped": 5,
+    "precision": 1.0,
+    "recall": 0.8888888888888888,
+    "f1": 0.9411764705882353
+   },
+   "water_or_mud": {
+    "n": 18,
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "tn": 15,
+    "abstain": 0,
+    "skipped": 2,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "overhead_lines": {
+    "n": 17,
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "tn": 14,
+    "abstain": 3,
+    "skipped": 3,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   }
+  },
+  "failures": {
+   "by_type": {
+    "abstain_on_clear": 25,
+    "false_alarm": 6,
+    "miss": 1
+   },
+   "by_item": {
+    "format_invalid": {},
+    "llm_error": {},
+    "false_alarm": {
+     "adjacent_structures": 2,
+     "perimeter_barrier": 1,
+     "stacked_materials": 2,
+     "worker_no_helmet": 1
+    },
+    "miss": {
+     "excavation": 1
+    },
+    "abstain_on_clear": {
+     "stacked_materials": 2,
+     "heavy_machinery": 1,
+     "workers": 4,
+     "worker_no_helmet": 4,
+     "perimeter_barrier": 5,
+     "public_road_or_traffic": 2,
+     "overhead_lines": 3,
+     "adjacent_structures": 2,
+     "signage": 1,
+     "excavation": 1
+    }
+   },
+   "examples": [
+    {
+     "photo_id": "p02",
+     "type": "false_alarm",
+     "item": "adjacent_structures",
+     "evidence": "手前と奥の2棟の建物がごく近接して並んで写っている"
+    },
+    {
+     "photo_id": "p04",
+     "type": "false_alarm",
+     "item": "perimeter_barrier",
+     "evidence": "手前左に金属製のフェンス（メッシュ柵）が写っている"
+    },
+    {
+     "photo_id": "p06",
+     "type": "false_alarm",
+     "item": "stacked_materials",
+     "evidence": "手前にコンテナ状の資材・廃材容器と黒いシートに包まれた資材が置かれている"
+    },
+    {
+     "photo_id": "p11",
+     "type": "false_alarm",
+     "item": "adjacent_structures",
+     "evidence": "コンクリート製の柱や壁が近接して複数写っている"
+    },
+    {
+     "photo_id": "p12",
+     "type": "false_alarm",
+     "item": "stacked_materials",
+     "evidence": "建物手前に青いコンテナ状のものと資材らしき塊が置かれている"
+    },
+    {
+     "photo_id": "p14",
+     "type": "false_alarm",
+     "item": "worker_no_helmet",
+     "evidence": "画面左寄りの作業員の一部はニット帽らしきものをかぶりヘルメットを着けていないように見える"
+    },
+    {
+     "photo_id": "p15",
+     "type": "miss",
+     "item": "excavation",
+     "evidence": "地面より低く掘り込まれた穴や溝、土留めは見えない"
+    }
+   ]
+  }
+ },
+ "framed": {
+  "n_records": 20,
+  "n_scored": 204,
+  "precision": 0.9090909090909091,
+  "recall": 0.9333333333333333,
+  "f1": 0.9210526315789475,
+  "accuracy": 0.9411764705882353,
+  "exact_match_rate": 0.6,
+  "abstain": 16,
+  "format_invalid": 0,
+  "llm_error": 0,
+  "per_item": {
+   "scaffolding": {
+    "n": 19,
+    "tp": 9,
+    "fp": 0,
+    "fn": 0,
+    "tn": 10,
+    "abstain": 0,
+    "skipped": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "heavy_machinery": {
+    "n": 17,
+    "tp": 10,
+    "fp": 0,
+    "fn": 1,
+    "tn": 6,
+    "abstain": 0,
+    "skipped": 3,
+    "precision": 1.0,
+    "recall": 0.9090909090909091,
+    "f1": 0.9523809523809523
+   },
+   "workers": {
+    "n": 20,
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "tn": 13,
+    "abstain": 3,
+    "skipped": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "worker_no_helmet": {
+    "n": 19,
+    "tp": 1,
+    "fp": 1,
+    "fn": 0,
+    "tn": 17,
+    "abstain": 1,
+    "skipped": 1,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6666666666666666
+   },
+   "perimeter_barrier": {
+    "n": 18,
+    "tp": 8,
+    "fp": 1,
+    "fn": 1,
+    "tn": 8,
+    "abstain": 1,
+    "skipped": 2,
+    "precision": 0.8888888888888888,
+    "recall": 0.8888888888888888,
+    "f1": 0.8888888888888888
+   },
+   "excavation": {
+    "n": 16,
+    "tp": 2,
+    "fp": 0,
+    "fn": 1,
+    "tn": 13,
+    "abstain": 1,
+    "skipped": 4,
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1": 0.8
+   },
+   "stacked_materials": {
+    "n": 15,
+    "tp": 6,
+    "fp": 2,
+    "fn": 0,
+    "tn": 7,
+    "abstain": 4,
+    "skipped": 5,
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1": 0.8571428571428571
+   },
+   "adjacent_structures": {
+    "n": 16,
+    "tp": 8,
+    "fp": 3,
+    "fn": 0,
+    "tn": 5,
+    "abstain": 1,
+    "skipped": 4,
+    "precision": 0.7272727272727273,
+    "recall": 1.0,
+    "f1": 0.8421052631578948
+   },
+   "public_road_or_traffic": {
+    "n": 14,
+    "tp": 6,
+    "fp": 0,
+    "fn": 0,
+    "tn": 8,
+    "abstain": 2,
+    "skipped": 6,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "signage": {
+    "n": 15,
+    "tp": 7,
+    "fp": 0,
+    "fn": 2,
+    "tn": 6,
+    "abstain": 1,
+    "skipped": 5,
+    "precision": 1.0,
+    "recall": 0.7777777777777778,
+    "f1": 0.8750000000000001
+   },
+   "water_or_mud": {
+    "n": 18,
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "tn": 15,
+    "abstain": 0,
+    "skipped": 2,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   },
+   "overhead_lines": {
+    "n": 17,
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "tn": 14,
+    "abstain": 2,
+    "skipped": 3,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+   }
+  },
+  "failures": {
+   "by_type": {
+    "abstain_on_clear": 16,
+    "miss": 4,
+    "false_alarm": 7
+   },
+   "by_item": {
+    "format_invalid": {},
+    "llm_error": {},
+    "false_alarm": {
+     "adjacent_structures": 3,
+     "perimeter_barrier": 1,
+     "stacked_materials": 2,
+     "worker_no_helmet": 1
+    },
+    "miss": {
+     "heavy_machinery": 1,
+     "perimeter_barrier": 1,
+     "signage": 1,
+     "excavation": 1
+    },
+    "abstain_on_clear": {
+     "stacked_materials": 4,
+     "perimeter_barrier": 1,
+     "public_road_or_traffic": 2,
+     "signage": 1,
+     "overhead_lines": 2,
+     "workers": 3,
+     "worker_no_helmet": 1,
+     "adjacent_structures": 1,
+     "excavation": 1
+    }
+   },
+   "examples": [
+    {
+     "photo_id": "p02",
+     "type": "miss",
+     "item": "heavy_machinery",
+     "evidence": "クレーンや掘削機などの建設機械は写っていない"
+    },
+    {
+     "photo_id": "p02",
+     "type": "false_alarm",
+     "item": "adjacent_structures",
+     "evidence": "右奥に隣接する別の建物（既存構造物）が写っている"
+    },
+    {
+     "photo_id": "p04",
+     "type": "false_alarm",
+     "item": "perimeter_barrier",
+     "evidence": "手前や右側に鋼製フェンス・バリケードが複数置かれている"
+    },
+    {
+     "photo_id": "p06",
+     "type": "false_alarm",
+     "item": "stacked_materials",
+     "evidence": "緑色の資材コンテナや廃材らしきものが建物手前に置かれている"
+    },
+    {
+     "photo_id": "p09",
+     "type": "miss",
+     "item": "perimeter_barrier",
+     "evidence": "仮囲いやフェンス、バリケードは写っていない"
+    },
+    {
+     "photo_id": "p09",
+     "type": "miss",
+     "item": "signage",
+     "evidence": "工事看板や標識は写っていない"
+    },
+    {
+     "photo_id": "p11",
+     "type": "false_alarm",
+     "item": "adjacent_structures",
+     "evidence": "大きなコンクリート柱・壁の構造物が近接して写っている"
+    },
+    {
+     "photo_id": "p12",
+     "type": "false_alarm",
+     "item": "stacked_materials",
+     "evidence": "フェンス際に青いコンテナ状の資材やパレットらしきものが置かれている"
+    },
+    {
+     "photo_id": "p14",
+     "type": "false_alarm",
+     "item": "worker_no_helmet",
+     "evidence": "左側の黒いフード付き上着の作業員はヘルメットを着けていないように見える"
+    },
+    {
+     "photo_id": "p14",
+     "type": "miss",
+     "item": "excavation",
+     "evidence": "地面は土砂敷きの作業ヤードだが、掘削穴や土留めの構造は確認できない"
+    },
+    {
+     "photo_id": "p19",
+     "type": "false_alarm",
+     "item": "adjacent_structures",
+     "evidence": "現場の奥に住宅らしき屋根の建物が木々の間に見える"
+    }
+   ]
+  }
+ }
+}
