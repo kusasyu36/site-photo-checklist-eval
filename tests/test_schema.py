@@ -59,4 +59,11 @@ def test_notable_points_capped_and_stringified():
     d = _full()
     d["notable_points"] = list(range(20))
     p = parse_prediction(json.dumps(d))
-    assert len(p.notable_points) == 10 and p.notable_points[0] == "0"
+    assert len(p.notable_points) == 5 and p.notable_points[0] == "0"
+
+
+def test_notable_points_cap_matches_prompt():
+    from spce.prompts import build_prompt
+    from spce.schema import MAX_NOTABLE_POINTS
+    assert MAX_NOTABLE_POINTS == 5
+    assert f"最大{MAX_NOTABLE_POINTS}件" in build_prompt("/x/p01.jpg", "bare")

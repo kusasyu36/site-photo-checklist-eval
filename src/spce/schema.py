@@ -1,7 +1,8 @@
-"""VLM出力の検証。
+"""モデル出力の検証。
 
-VLMの返答は信用しない。JSONとして読めるか、全項目があるか、値が許された3値かを検査し、
-不正なら InvalidOutput を投げる（呼び出し側が failure として記録する）。
+モデル出力はそのまま採点せず、JSON として読めるか、12項目が全部あるか、値が yes / no / unclear のいずれかを検査する。
+不正なら InvalidOutput を投げ、呼び出し側が format_invalid として記録する。
+notable_points はプロンプトで最大5件と指定しているので、それを超えた分は切り捨てる。
 """
 from __future__ import annotations
 
@@ -12,6 +13,7 @@ from dataclasses import dataclass, field
 from .checklist import KEYS
 
 ALLOWED = ("yes", "no", "unclear")
+MAX_NOTABLE_POINTS = 5  # prompts.py の指定と合わせる
 
 
 class InvalidOutput(ValueError):
@@ -71,4 +73,4 @@ def parse_prediction(text: str) -> Prediction:
     notes = data.get("notable_points", [])
     if not isinstance(notes, list):
         raise InvalidOutput("notable_points must be a list")
-    return Prediction(items=items, evidence=evidence, notable_points=[str(n)[:300] for n in notes][:10])
+    return Prediction(items=items, evidence=evidence, notable_points=[str(n)[:300] for n in notes][:MAX_NOTABLE_POINTS])
