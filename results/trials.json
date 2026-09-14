@@ -1,0 +1,287 @@
+{
+ "bare": {
+  "trials": {
+   "1": {
+    "n_records": 20,
+    "accuracy": 0.9558823529411765,
+    "precision": 0.9342105263157895,
+    "recall": 0.9466666666666667,
+    "abstain": 23,
+    "miss": 1,
+    "false_alarm": 5,
+    "exact_match_rate": 0.65,
+    "format_invalid": 0,
+    "llm_error": 0
+   },
+   "2": {
+    "n_records": 20,
+    "accuracy": 0.9607843137254902,
+    "precision": 0.958904109589041,
+    "recall": 0.9333333333333333,
+    "abstain": 20,
+    "miss": 2,
+    "false_alarm": 3,
+    "exact_match_rate": 0.65,
+    "format_invalid": 0,
+    "llm_error": 0
+   },
+   "3": {
+    "n_records": 20,
+    "accuracy": 0.9705882352941176,
+    "precision": 0.9726027397260274,
+    "recall": 0.9466666666666667,
+    "abstain": 31,
+    "miss": 2,
+    "false_alarm": 2,
+    "exact_match_rate": 0.7,
+    "format_invalid": 0,
+    "llm_error": 0
+   }
+  },
+  "summary": {
+   "accuracy": {
+    "mean": 0.9624183006535948,
+    "min": 0.9558823529411765,
+    "max": 0.9705882352941176
+   },
+   "precision": {
+    "mean": 0.955239125210286,
+    "min": 0.9342105263157895,
+    "max": 0.9726027397260274
+   },
+   "recall": {
+    "mean": 0.9422222222222222,
+    "min": 0.9333333333333333,
+    "max": 0.9466666666666667
+   },
+   "abstain": {
+    "mean": 24.666666666666668,
+    "min": 20,
+    "max": 31
+   },
+   "miss": {
+    "mean": 1.6666666666666667,
+    "min": 1,
+    "max": 2
+   },
+   "false_alarm": {
+    "mean": 3.3333333333333335,
+    "min": 2,
+    "max": 5
+   },
+   "exact_match_rate": {
+    "mean": 0.6666666666666666,
+    "min": 0.65,
+    "max": 0.7
+   },
+   "flips": {
+    "changed": 40,
+    "total": 204,
+    "per_item": {
+     "workers": 3,
+     "perimeter_barrier": 6,
+     "excavation": 5,
+     "public_road_or_traffic": 2,
+     "heavy_machinery": 2,
+     "worker_no_helmet": 4,
+     "adjacent_structures": 6,
+     "stacked_materials": 3,
+     "signage": 2,
+     "water_or_mud": 3,
+     "overhead_lines": 3,
+     "scaffolding": 1
+    }
+   }
+  }
+ },
+ "hinted": {
+  "trials": {
+   "1": {
+    "n_records": 20,
+    "accuracy": 0.946078431372549,
+    "precision": 0.9210526315789473,
+    "recall": 0.9333333333333333,
+    "abstain": 25,
+    "miss": 1,
+    "false_alarm": 6,
+    "exact_match_rate": 0.6,
+    "format_invalid": 0,
+    "llm_error": 0
+   },
+   "2": {
+    "n_records": 20,
+    "accuracy": 0.9705882352941176,
+    "precision": 0.9859154929577465,
+    "recall": 0.9333333333333333,
+    "abstain": 18,
+    "miss": 3,
+    "false_alarm": 1,
+    "exact_match_rate": 0.7,
+    "format_invalid": 0,
+    "llm_error": 0
+   },
+   "3": {
+    "n_records": 20,
+    "accuracy": 0.9607843137254902,
+    "precision": 0.971830985915493,
+    "recall": 0.92,
+    "abstain": 26,
+    "miss": 3,
+    "false_alarm": 2,
+    "exact_match_rate": 0.65,
+    "format_invalid": 0,
+    "llm_error": 0
+   }
+  },
+  "summary": {
+   "accuracy": {
+    "mean": 0.9591503267973857,
+    "min": 0.946078431372549,
+    "max": 0.9705882352941176
+   },
+   "precision": {
+    "mean": 0.9595997034840623,
+    "min": 0.9210526315789473,
+    "max": 0.9859154929577465
+   },
+   "recall": {
+    "mean": 0.9288888888888889,
+    "min": 0.92,
+    "max": 0.9333333333333333
+   },
+   "abstain": {
+    "mean": 23.0,
+    "min": 18,
+    "max": 26
+   },
+   "miss": {
+    "mean": 2.3333333333333335,
+    "min": 1,
+    "max": 3
+   },
+   "false_alarm": {
+    "mean": 3.0,
+    "min": 1,
+    "max": 6
+   },
+   "exact_match_rate": {
+    "mean": 0.65,
+    "min": 0.6,
+    "max": 0.7
+   },
+   "flips": {
+    "changed": 44,
+    "total": 204,
+    "per_item": {
+     "perimeter_barrier": 7,
+     "excavation": 3,
+     "public_road_or_traffic": 3,
+     "water_or_mud": 3,
+     "heavy_machinery": 2,
+     "adjacent_structures": 6,
+     "overhead_lines": 7,
+     "stacked_materials": 4,
+     "workers": 2,
+     "worker_no_helmet": 4,
+     "signage": 2,
+     "scaffolding": 1
+    }
+   }
+  }
+ },
+ "framed": {
+  "trials": {
+   "1": {
+    "n_records": 20,
+    "accuracy": 0.9411764705882353,
+    "precision": 0.9090909090909091,
+    "recall": 0.9333333333333333,
+    "abstain": 16,
+    "miss": 4,
+    "false_alarm": 7,
+    "exact_match_rate": 0.6,
+    "format_invalid": 0,
+    "llm_error": 0
+   },
+   "2": {
+    "n_records": 20,
+    "accuracy": 0.9656862745098039,
+    "precision": 0.9722222222222222,
+    "recall": 0.9333333333333333,
+    "abstain": 17,
+    "miss": 2,
+    "false_alarm": 2,
+    "exact_match_rate": 0.7,
+    "format_invalid": 0,
+    "llm_error": 0
+   },
+   "3": {
+    "n_records": 20,
+    "accuracy": 0.9656862745098039,
+    "precision": 0.9594594594594594,
+    "recall": 0.9466666666666667,
+    "abstain": 10,
+    "miss": 2,
+    "false_alarm": 3,
+    "exact_match_rate": 0.65,
+    "format_invalid": 0,
+    "llm_error": 0
+   }
+  },
+  "summary": {
+   "accuracy": {
+    "mean": 0.9575163398692811,
+    "min": 0.9411764705882353,
+    "max": 0.9656862745098039
+   },
+   "precision": {
+    "mean": 0.9469241969241969,
+    "min": 0.9090909090909091,
+    "max": 0.9722222222222222
+   },
+   "recall": {
+    "mean": 0.9377777777777778,
+    "min": 0.9333333333333333,
+    "max": 0.9466666666666667
+   },
+   "abstain": {
+    "mean": 14.333333333333334,
+    "min": 10,
+    "max": 17
+   },
+   "miss": {
+    "mean": 2.6666666666666665,
+    "min": 2,
+    "max": 4
+   },
+   "false_alarm": {
+    "mean": 4.0,
+    "min": 2,
+    "max": 7
+   },
+   "exact_match_rate": {
+    "mean": 0.65,
+    "min": 0.6,
+    "max": 0.7
+   },
+   "flips": {
+    "changed": 32,
+    "total": 204,
+    "per_item": {
+     "heavy_machinery": 1,
+     "perimeter_barrier": 2,
+     "adjacent_structures": 4,
+     "public_road_or_traffic": 2,
+     "signage": 4,
+     "excavation": 3,
+     "overhead_lines": 4,
+     "stacked_materials": 3,
+     "worker_no_helmet": 4,
+     "workers": 2,
+     "water_or_mud": 2,
+     "scaffolding": 1
+    }
+   }
+  }
+ }
+}
